@@ -7,9 +7,6 @@
             >
             <span>    {{ series.title }}: </span>
             <span>( {{ series.productionStartYear }} - {{ series.productionEndYear }} )</span>
-            <span>
-                <button v-on:click=>Select</button>
-            </span>
             </li>
         </ul>
     </div>

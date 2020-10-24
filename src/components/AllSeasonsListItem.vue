@@ -2,8 +2,8 @@
   <div>
       <ul>
             <li v-on:click='handleClick'>
-            <span>{{ season.series.title }}</span>
-            <span> | Season: {{ season.seasonNumber }}</span>
+            <span>{{ season.title }}: </span>
+            <span> | {{ season.numberOfEpisodes }} episodes</span>
             </li>
       </ul>
   </div>
