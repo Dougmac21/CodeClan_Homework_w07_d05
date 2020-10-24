@@ -1,6 +1,6 @@
 <template lang="html">
     <div v-if='season'>
-        <h2>{{ season.title }}</h2>
+        <h2>SeasonDetails.vue</h2>
         <p>{{ season.numberOfEpisodes }} episodes XXXXX</p>
 
         <all-episodes-list-item

@@ -2,16 +2,22 @@
   <main>
     <h1>Star TrekkR</h1>
     <div class ="main-container">
-      <p class="testing">seriesList</p>
+      <p class="testing">appmain seriesList</p>
       <all-series-list :allSeries='allSeries.series'></all-series-list>
       <br>
-      <p class="testing">seriesDetails</p>
+      <p class="testing">appmain seriesDetails</p>
       <series-details :series='selectedSeries', :allSeasons='allSeasons.seasons'></series-details>
       <hr>
+      <p class="testing">appmain seasonsList</p>
+      <all-seasons-list :allSeasons='allSeasons.seasons'></all-seasons-list>
+      <br>
       <p class="testing">seasonDetails</p>
       <season-details :season='selectedSeason', :allEpisodes='allEpisodes.episodes'></season-details>
       <hr>
-      <p class="testing">episodeDetails</p>
+      <p class="testing">appmain episodesList</p>
+      <all-episodes-list :allEpisodes='allEpisodes.episodes'></all-episodes-list>
+      <br>
+      <p class="testing">appmain episodeDetails</p>
       <episode-details :episode='selectedEpisode'></episode-details>
     </div>
   </main>
