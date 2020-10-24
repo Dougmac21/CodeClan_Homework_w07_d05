@@ -36,13 +36,47 @@ export default {
     }
   },
   methods: {
+    getSeriesData: function() {
+      fetch("http://stapi.co/api/v1/rest/series/search")
+      .then(res => res.json())
+      .then(all_series => this.allSeries = all_series)
+      .then(() => this.sortSeries("productionStartYear"))
+    },
+
     sortSeries: function(seriesProperty) {
-      this.allSeries.sort((seriesA, seriesB) => {
+      this.allSeries.series.sort((seriesA, seriesB) => {
         return seriesA[seriesProperty] < seriesB[seriesProperty] ? -1 : 1;
+      });
+    },
+
+    getSeasonData: function() {
+    fetch("http://stapi.co/api/v1/rest/season/search")
+    .then(res => res.json())
+    .then(all_seasons => this.allSeasons = all_seasons)
+    .then(() => this.sortSeasons("seasonNumber"))
+    },
+
+    sortSeasons: function(seasonProperty) {
+      this.allSeasons.seasons.sort((seasonA, seasonB) => {
+        return seasonA[seasonProperty] < seasonB[seasonProperty] ? -1 : 1;
+      });
+    },
+
+    getEpisodeData: function() {
+    fetch("http://stapi.co/api/v1/rest/episode/search")
+    .then(res => res.json())
+    .then(all_episodes => this.allEpisodes = all_episodes)
+    .then(() => this.sortEpisodes("episodeNumber"))
+    },
+
+    sortEpisodes: function(episodeProperty) {
+      this.allEpisodes.episodes.sort((episodeA, episodeB) => {
+        return episodeA[episodeProperty] < episodeB[episodeProperty] ? -1 : 1;
       });
     }
 
   },
+
   components: {
     "all-series-list": AllSeriesList,
     "series-details": SeriesDetails,
@@ -53,27 +87,21 @@ export default {
     "all-episodes-list": AllEpisodesList,
     "episode-details": EpisodeDetails
   },
+
   mounted() {
-    fetch("http://stapi.co/api/v1/rest/series/search")
-    .then(res => res.json())
-    .then(all_series => this.allSeries = all_series)
+    this.getSeriesData();
+    this.getSeasonData();
+    this.getEpisodeData();
 
-    fetch("http://stapi.co/api/v1/rest/season/search")
-    .then(res => res.json())
-    .then(all_seasons => this.allSeasons = all_seasons)
-
-    fetch("http://stapi.co/api/v1/rest/episode/search")
-    .then(res => res.json())
-    .then(all_episodes => this.allEpisodes = all_episodes)
-
+    // eventBus.$on('series-selected', series => (this.selectedSeries = series));
 
     eventBus.$on('series-selected', (series) => {
       this.selectedSeries = series;
-    })
+    }),
 
     eventBus.$on('season-selected', (season) => {
       this.selectedSeason = season;
-    })
+    }),
 
     eventBus.$on('episode-selected', (episode) => {
       this.selectedEpisode = episode;
