@@ -30,7 +30,9 @@ components: {
 </script>
      
 <style lang="css" scoped>
-
+.testing {
+  color: red;
+}
 </style>
 
         // v-if="episode.season.title === season.title"

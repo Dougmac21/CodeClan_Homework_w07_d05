@@ -1,12 +1,13 @@
 <template>
   <div>
         <ul>
+            <p class="testing">AllEpisodesListItem.vue</p>
             <li
             
             v-on:click='handleEpisodeClick'
             >
-            <span id="episode-number">{{ episode.episodeNumber }}</span>
-            <span id="episode-title">{{ episode.title }}</span>
+            <span id="episode-number">AllEpisodesListItem.vue - {{ episode.episodeNumber }}</span>
+            <span id="episode-title">: {{ episode.title }}</span>
             </li>
         </ul>
   </div>
@@ -30,5 +31,8 @@ export default {
 ul {
     list-style: none;
     cursor: pointer;
+}
+.testing {
+  color: red;
 }
 </style>

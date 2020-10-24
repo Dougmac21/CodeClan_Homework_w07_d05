@@ -2,11 +2,10 @@
     <div>
         <ul>
             <li
-            
             v-on:click='handleSeasonClick'
             >
-            <span id="season-title">AllSeasonslistItem.vue</span>
-            <span id="season-num-eps"> | {{ season.numberOfEpisodes }} episodes XXXXX</span>
+            <span id="season-title">AllSeasonsListItem.vue - {{ season.title }}</span>
+            <span id="season-num-eps"> | {{ season.numberOfEpisodes }} episodes</span>
             </li>
         </ul>
 
@@ -31,5 +30,8 @@ export default {
 ul {
     list-style: none;
     cursor: pointer;
+}
+.testing {
+  color: red;
 }
 </style>

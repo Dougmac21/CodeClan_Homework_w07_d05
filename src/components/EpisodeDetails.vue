@@ -1,7 +1,7 @@
 <template lang="html">
     <div v-if='episode'>
         <h2>{{ episode.title }}</h2>
-        <p>Placeholder Description</p>
+        <p class="testing">EpisodeDetails.vue</p>
 
 
 
@@ -30,5 +30,7 @@ components: {
 </script>
 
 <style lang="css" scoped>
-
+.testing {
+  color: red;
+}
 </style>

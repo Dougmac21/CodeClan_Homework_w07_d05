@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p class="testing">AllSeriesListItem.vue</p>
         <ul>
             <li
             v-if="series.productionStartYear !== null"
@@ -30,5 +31,9 @@ export default {
 ul {
     list-style: none;
     cursor: pointer;
+}
+
+.testing {
+  color: red;
 }
 </style>

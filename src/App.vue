@@ -14,7 +14,7 @@
       <p class="testing">seasonDetails</p>
       <season-details :season='selectedSeason', :allEpisodes='allEpisodes.episodes'></season-details>
       <hr>
-      <p class="testing">appmain episodesList</p>
+      <p class="testing">appmain allEpisodesList</p>
       <all-episodes-list :allEpisodes='allEpisodes.episodes'></all-episodes-list>
       <br>
       <p class="testing">appmain episodeDetails</p>
@@ -66,9 +66,9 @@ export default {
     .then(() => this.sortSeasons("seasonNumber"))
     },
 
-    sortSeasons: function(seasonProperty) {
+    sortSeasons: function(seasonNumber) {
       this.allSeasons.seasons.sort((seasonA, seasonB) => {
-        return seasonA[seasonProperty] < seasonB[seasonProperty] ? -1 : 1;
+        return seasonA[seasonNumber] < seasonB[seasonNumber] ? -1 : 1;
       });
     },
 

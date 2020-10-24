@@ -1,6 +1,7 @@
 <template lang="html">
     <div v-if='series'>
         <h2>{{ series.title }}</h2>
+        <p class="testing">SeriesDetils.vue</p>
         <p> Total of {{ series.episodesCount }} episodes</p>
         <p> over {{ series.seasonsCount }} seasons.</p>
         <all-seasons-list-item
@@ -30,5 +31,7 @@ components: {
 </script>
 
 <style lang="css" scoped>
-
+.testing {
+  color: red;
+}
 </style>

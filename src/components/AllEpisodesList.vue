@@ -1,5 +1,6 @@
 <template lang="html">
     <div>
+        <p class="testing">AllEpisodesList.vue</p>
         <ul>
             <all-episodes-list-item
             v-for="(episode, index) in allEpisodes" :episode="episode" :key="index">
@@ -22,5 +23,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
+.testing {
+  color: red;
+}
 </style>
