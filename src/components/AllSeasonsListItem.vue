@@ -1,13 +1,14 @@
 <template>
     <div>
         <ul>
-            <li v-on:click='handleClick'>
-            <span>{{ season.title }}: </span>
-            <span> | {{ season.numberOfEpisodes }} episodes</span>
+            <li
+            
+            v-on:click='handleClick'
+            >
+            <span id="season-title">{{ season.title }}: </span>
+            <span id="season-num-eps"> | {{ season.numberOfEpisodes }} episodes</span>
             </li>
         </ul>
-
-
 
     </div>
 </template>
@@ -32,4 +33,3 @@ ul {
     cursor: pointer;
 }
 </style>
-            <!-- v-if="season.series.title === series.title" -->

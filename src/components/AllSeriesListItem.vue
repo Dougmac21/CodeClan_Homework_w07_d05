@@ -5,8 +5,8 @@
             v-if="series.productionStartYear != null"
             v-on:click='handleClick'
             >
-            <span>    {{ series.title }}: </span>
-            <span>( {{ series.productionStartYear }} - {{ series.productionEndYear }} )</span>
+            <span id="series-title">    {{ series.title }}: </span>
+            <span id="series-years">( {{ series.productionStartYear }} - {{ series.productionEndYear }} )</span>
             </li>
         </ul>
     </div>

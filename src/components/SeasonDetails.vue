@@ -4,7 +4,7 @@
         <p>{{ season.numberOfEpisodes }} episodes</p>
         <p> -placeholder- </p>
         <all-episodes-list-item
-        v-if="episode.season.title === season.title"
+        
         v-for="(episode, index) in allEpisodes" :episode="episode" :key="index">
         </all-episodes-list-item>
     </div> 
@@ -18,7 +18,7 @@ import AllEpisodesListItem from './AllEpisodesListItem';
 
 export default {
     name: 'season-details',
-    props: ['season'],
+    props: ['season', 'allEpisodes'],
 
 
 components: {
@@ -32,3 +32,5 @@ components: {
 <style lang="css" scoped>
 
 </style>
+
+        // v-if="episode.season.title === season.title"
