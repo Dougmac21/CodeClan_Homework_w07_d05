@@ -1,13 +1,25 @@
-<template>
-  
+<template lang="html">
+    <div>
+        <h1>AllSeriesList</h1>
+        <ul>
+            <all-series-list-item v-for="(series, index) in allSeries" :series="series" :key="index"></all-series-list-item>
+        </ul>
+    
+    </div>
 </template>
 
 <script>
-export default {
+import AllSeriesListItem from './AllSeriesListItem.vue'
 
+export default {
+    name: 'all-series-list',
+    props: ['allSeries'],
+    components: {
+        'all-series-list-item': AllSeriesListItem
+    }
 }
 </script>
 
-<style>
+<style lang="css" scoped>
 
 </style>

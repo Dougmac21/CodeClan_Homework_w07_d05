@@ -2,7 +2,7 @@
   <main>
     <h1>Star TrekkR</h1>
     <div class ="main-container">
-      <series-list :allSeries='allSeries'></series-list>
+      <all-series-list :allSeries='allSeries'></all-series-list>
       <hr>
       <series-details :series='selectedSeries'></series-details>
       <hr>
@@ -13,12 +13,12 @@
 <script>
 import AllSeriesList from './components/AllSeriesList';
 import SeriesDetails from './components/SeriesDetails';
-import AllSeasonsList from './components'
-import SeasonDetails from './components'
-import AllEpisodesList from './components'
-import EpisodeDetails from './components'
+import AllSeasonsList from './components/AllSeasonsList';
+import SeasonDetails from './components/SeasonDetails';
+import AllEpisodesList from './components/AllEpisodesList';
+import EpisodeDetails from './components/EpisodeDetails';
 
-import { eventBus } from '@/main.js'
+import { eventBus } from '@/main.js';
 
 export default {
   name: 'app',
@@ -57,6 +57,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css" scoped>
 
 </style>
