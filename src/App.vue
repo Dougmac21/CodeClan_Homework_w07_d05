@@ -1,28 +1,47 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="html">
+  <main>
+    <h1>Star TrekkR</h1>
+    <div class ="main-container">
+      <series-list :allSeries='allSeries'></series-list>
+      <hr>
+      <series-details :series='selectedSeries'></series-details>
+      <hr>
+    </div>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AllSeriesList from './components/AllSeriesList';
+import SeriesDetails from './components/SeriesDetails';
+
+import { eventBus } from '@/main.js'
 
 export default {
-  name: 'App',
+  name: 'app',
+  data() {
+    return {
+      allSeries: [],
+      selectedSeries: null,
+      allSeasons: [],
+      selectedSeason: null
+    }
+  },
+  methods: {
+
+  },
   components: {
-    HelloWorld
+    "all-series-list": AllSeriesList,
+    "series-details": SeriesDetails,
+  },
+  mounted() {
+    fetch("http://stapi.co/api/v1/rest/season/search")
+    .then(res => res.json())
+    .then(all_seasons => this.allSeasons = all_seasons)
+
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
