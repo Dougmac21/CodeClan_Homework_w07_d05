@@ -1,10 +1,10 @@
 <template lang="html">
     <div v-if='season'>
-        <h2>Season Details:</h2>
-        <h3>{{ season.title }}</h3>
-        <p>{{ season.numberOfEpisodes }}</p>
+        <h2>{{ season.title }}</h2>
+        <p>{{ season.numberOfEpisodes }} episodes</p>
+        <p> -placeholder- </p>
         <all-episodes-list-item
-        
+        v-if="episode.season.title === season.title"
         v-for="(episode, index) in allEpisodes" :episode="episode" :key="index">
         </all-episodes-list-item>
     </div> 

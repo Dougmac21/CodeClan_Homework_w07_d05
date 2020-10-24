@@ -6,8 +6,7 @@
       <br>
       <series-details :series='selectedSeries', :allSeasons='allSeasons.seasons'></series-details>
       <hr>
-      <!-- <all-seasons-list :allSeasons='allSeasons.seasons'></all-seasons-list> -->
-      <season-details :season='selectedSeason'></season-details>
+      <season-details :season='selectedSeason', :allEpisodes='allEpisodes.episodes'></season-details>
       <hr>
       <episode-details :episode='selectedEpisode'></episode-details>
     </div>
@@ -37,6 +36,11 @@ export default {
     }
   },
   methods: {
+    sortSeries: function(seriesProperty) {
+      this.allSeries.sort((seriesA, seriesB) => {
+        return seriesA[seriesProperty] < seriesB[seriesProperty] ? -1 : 1;
+      });
+    }
 
   },
   components: {
