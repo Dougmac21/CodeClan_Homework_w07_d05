@@ -3,10 +3,10 @@
     <h1>Star TrekkR</h1>
     <div class ="main-container">
       <all-series-list :allSeries='allSeries.series'></all-series-list>
+      <br>
+      <series-details :series='selectedSeries', :allSeasons='allSeasons.seasons'></series-details>
       <hr>
-      <series-details :series='selectedSeries'></series-details>
-      <series-details :allSeasons='allSeasons.seasons'></series-details>
-      <hr>
+      <!-- <all-seasons-list :allSeasons='allSeasons.seasons'></all-seasons-list> -->
       <season-details :season='selectedSeason'></season-details>
     </div>
   </main>
@@ -71,7 +71,7 @@ export default {
 
     // eventBus.$on('episode-selected', (episode) => {
     //   this.selectedEpisode = episode;
-    })
+    // })
   }
 }
 </script>
