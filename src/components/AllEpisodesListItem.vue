@@ -3,10 +3,10 @@
         <ul>
             <li
             
-            v-on:click='handleClick'
+            v-on:click='handleEpisodeClick'
             >
-            <h2>{{ episode.title }}</h2>
-            <p>{{ episode.synopsis }}</p>
+            <span id="episode-number">{{ episode.episodeNumber }}</span>
+            <span id="episode-title">{{ episode.title }}</span>
             </li>
         </ul>
   </div>
@@ -19,7 +19,7 @@ export default {
     name: 'all-episodes-list-item',
     props: ['episode'],
     methods: {
-        handleClick() {
+        handleEpisodeClick() {
             eventBus.$emit('episode-selected', this.episode)
         }
     }

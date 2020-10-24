@@ -3,7 +3,7 @@
         <ul>
             <li
             
-            v-on:click='handleClick'
+            v-on:click='handleSeasonClick'
             >
             <span id="season-title">{{ season.title }}: </span>
             <span id="season-num-eps"> | {{ season.numberOfEpisodes }} episodes</span>
@@ -20,7 +20,7 @@ export default {
     name: 'all-seasons-list-item',
     props: ['season'],
     methods: {
-        handleClick() {
+        handleSeasonClick() {
             eventBus.$emit('season-selected', this.season)
         }
     }

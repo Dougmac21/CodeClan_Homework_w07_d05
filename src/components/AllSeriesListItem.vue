@@ -3,7 +3,7 @@
         <ul>
             <li
             v-if="series.productionStartYear != null"
-            v-on:click='handleClick'
+            v-on:click='handleSeriesClick'
             >
             <span id="series-title">    {{ series.title }}: </span>
             <span id="series-years">( {{ series.productionStartYear }} - {{ series.productionEndYear }} )</span>
@@ -19,7 +19,7 @@ export default {
     name: 'all-series-list-item',
     props: ['series'],
     methods: {
-        handleClick() {
+        handleSeriesClick() {
             eventBus.$emit('series-selected', this.series)
         }
     }
