@@ -1,9 +1,14 @@
 <template>
-  <div>
-      <ul>
-          <li v-on:click='handleClick'> {{ series.title }}</li>
-      </ul>
-  </div>
+    <div>
+        <ul>
+            <li
+            v-if="series.productionStartYear != null"
+            v-on:click='handleClick'>
+            <span>{{ series.title }}: </span>
+            <span>{{ series.productionStartYear }} - {{ series.productionEndYear }}</span>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
