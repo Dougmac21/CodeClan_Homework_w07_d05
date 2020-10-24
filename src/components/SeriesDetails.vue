@@ -8,7 +8,6 @@
         v-for="(season, index) in allSeasons" :season="season" :key="index">
         </all-seasons-list-item>
     </div>
-
 </template>
 
 <script>

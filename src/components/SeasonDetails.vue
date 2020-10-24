@@ -4,15 +4,29 @@
         <h3>{{ season.title }}</h3>
         <p>{{ season.numberOfEpisodes }}</p>
         
+
+
+
     </div> 
 </template>
 
 <script>
+
+
+
+
+
 export default {
     name: 'season-details',
     props: ['season']
 
 }
+
+
+
+
+
+
 </script>
      
 <style lang="css" scoped>

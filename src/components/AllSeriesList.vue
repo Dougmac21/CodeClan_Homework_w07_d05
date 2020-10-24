@@ -1,6 +1,5 @@
 <template lang="html">
     <div>
-        <h1>Click for info.</h1>
         <ul>
             <all-series-list-item
             v-for="(series, index) in allSeries" :series="series" :key="index">

@@ -1,7 +1,10 @@
 <template>
   <div>
         <ul>
-            <li v-on:click='handleClick'>
+            <li
+            
+            v-on:click='handleClick'
+            >
             <h2>{{ episode.title }}</h2>
             <p>{{ episode.synopsis }}</p>
             </li>
@@ -20,7 +23,6 @@ export default {
             eventBus.$emit('episode-selected', this.episode)
         }
     }
-
 }
 </script>
 
@@ -29,5 +31,4 @@ ul {
     list-style: none;
     cursor: pointer;
 }
-
 </style>

@@ -1,7 +1,9 @@
 <template lang="html">
   <div>
       <ul>
-          <all-seasons-list-item v-for="(season, index) in allSeasons" :season="season" :key="index"></all-seasons-list-item>
+          <all-seasons-list-item
+          v-for="(season, index) in allSeasons" :season="season" :key="index">
+          </all-seasons-list-item>
       </ul>
       <hr>
   </div>
@@ -19,6 +21,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css" scoped>
 
 </style>

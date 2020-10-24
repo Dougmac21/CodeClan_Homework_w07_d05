@@ -1,19 +1,34 @@
 <template lang="html">
     <div v-if='episode'>
-        <h2>Episode Detail:</h2>
-        <h3>{{ episode.title }}</h3>
+        <h2>{{ episode.title }}</h2>
         <p>{{ episode.plot }}</p>
+
+
+
+
+
     </div>
 </template>
 
 <script>
+import AllSeasonsList from './AllSeasonsList';
+import AllEpisodesList from './AllEpisodesList';
+import AllEpisodesListItem from './AllEpisodesListItem';
+
+
 export default {
     name: 'episode-details',
-    props: ['episode']
+    props: ['episode'],
+
+
+components: {
+    "all-seasons-list": AllSeasonsList,
+    "all-episodes-list": AllEpisodesList,
+    "all-episodes-list-item": AllEpisodesListItem
+}
 }
 </script>
 
 <style lang="css" scoped>
-
 
 </style>
