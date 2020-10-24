@@ -1,7 +1,6 @@
 <template>
   <div>
         <ul>
-            <p class="testing">AllEpisodesListItem.vue</p>
             <li
             
             v-on:click='handleEpisodeClick'

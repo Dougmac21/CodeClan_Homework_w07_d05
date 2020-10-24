@@ -1,7 +1,6 @@
 <template lang="html">
     <div v-if='episode'>
         <h2>{{ episode.title }}</h2>
-        <p class="testing">EpisodeDetails.vue</p>
 
 
 

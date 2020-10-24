@@ -1,8 +1,7 @@
 <template lang="html">
     <div v-if='series'>
         <h2>{{ series.title }}</h2>
-        <p class="testing">SeriesDetils.vue</p>
-        <p> Total of {{ series.episodesCount }} episodes</p>
+        <span> Ran for a total of {{ series.episodesCount }} episodes</span>
         <p> over {{ series.seasonsCount }} seasons.</p>
         <all-seasons-list-item
         v-if="season.series.title === series.title"

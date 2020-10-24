@@ -1,6 +1,5 @@
 <template>
     <div>
-        <p class="testing">AllSeriesListItem.vue</p>
         <ul>
             <li
             v-if="series.productionStartYear !== null"
