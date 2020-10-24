@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import AllSeriesList from './AllSeriesList'
+import AllSeriesList from './AllSeriesList';
 import AllSeasonsList from './AllSeasonsList';
 import AllSeasonsListItem from './AllSeasonsListItem';
 

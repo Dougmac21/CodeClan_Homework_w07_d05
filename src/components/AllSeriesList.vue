@@ -5,6 +5,7 @@
             v-for="(series, index) in allSeries" :series="series" :key="index">
             </all-series-list-item>
         </ul>
+        <hr>
     </div>
 </template>
 
