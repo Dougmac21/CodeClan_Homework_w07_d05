@@ -1,6 +1,5 @@
 <template lang="html">
   <div>
-      <h2>Select A Season:</h2>
       <ul>
           <all-seasons-list-item v-for="(season, index) in allSeasons" :season="season" :key="index"></all-seasons-list-item>
       </ul>

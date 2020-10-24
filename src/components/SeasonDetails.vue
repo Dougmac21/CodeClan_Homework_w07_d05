@@ -3,9 +3,8 @@
         <h2>Season Details:</h2>
         <h3>{{ season.title }}</h3>
         <p>{{ season.numberOfEpisodes }}</p>
-
-    </div>
-  
+        
+    </div> 
 </template>
 
 <script>

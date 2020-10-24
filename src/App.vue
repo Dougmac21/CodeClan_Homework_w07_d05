@@ -5,9 +5,7 @@
       <all-series-list :allSeries='allSeries.series'></all-series-list>
       <hr>
       <series-details :series='selectedSeries'></series-details>
-      <hr>
-      <hr>
-      <all-seasons-list :allSeasons='allSeasons.seasons'></all-seasons-list>
+      <series-details :allSeasons='allSeasons.seasons'></series-details>
       <hr>
       <season-details :season='selectedSeason'></season-details>
     </div>
@@ -69,6 +67,10 @@ export default {
 
     eventBus.$on('season-selected', (season) => {
       this.selectedSeason = season;
+    })
+
+    // eventBus.$on('episode-selected', (episode) => {
+    //   this.selectedEpisode = episode;
     })
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
       <ul>
-          <li v-on:click='handleClick'>{{ season.seasonNumber }}</li>
+          <li v-on:click='handleClick'>Season: {{ season.seasonNumber }}</li>
       </ul>
   </div>
 </template>
