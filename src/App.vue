@@ -2,12 +2,16 @@
   <main>
     <h1>Star TrekkR</h1>
     <div class ="main-container">
+      <p class="testing">seriesList</p>
       <all-series-list :allSeries='allSeries.series'></all-series-list>
       <br>
+      <p class="testing">seriesDetails</p>
       <series-details :series='selectedSeries', :allSeasons='allSeasons.seasons'></series-details>
       <hr>
+      <p class="testing">seasonDetails</p>
       <season-details :season='selectedSeason', :allEpisodes='allEpisodes.episodes'></season-details>
       <hr>
+      <p class="testing">episodeDetails</p>
       <episode-details :episode='selectedEpisode'></episode-details>
     </div>
   </main>
@@ -111,5 +115,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.testing {
+  color: red;
+}
 
 </style>

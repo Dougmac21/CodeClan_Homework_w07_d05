@@ -2,7 +2,7 @@
     <div>
         <ul>
             <li
-            v-if="series.productionStartYear != null"
+            v-if="series.productionStartYear !== null"
             v-on:click='handleSeriesClick'
             >
             <span id="series-title">    {{ series.title }}: </span>

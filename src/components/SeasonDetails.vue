@@ -1,8 +1,8 @@
 <template lang="html">
     <div v-if='season'>
         <h2>{{ season.title }}</h2>
-        <p>{{ season.numberOfEpisodes }} episodes</p>
-        <p> -placeholder- </p>
+        <p>{{ season.numberOfEpisodes }} episodes XXXXX</p>
+
         <all-episodes-list-item
         
         v-for="(episode, index) in allEpisodes" :episode="episode" :key="index">

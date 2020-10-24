@@ -6,7 +6,7 @@
             v-on:click='handleSeasonClick'
             >
             <span id="season-title">{{ season.title }}: </span>
-            <span id="season-num-eps"> | {{ season.numberOfEpisodes }} episodes</span>
+            <span id="season-num-eps"> | {{ season.numberOfEpisodes }} episodes XXXXX</span>
             </li>
         </ul>
 
