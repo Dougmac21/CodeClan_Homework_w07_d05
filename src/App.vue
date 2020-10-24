@@ -6,6 +6,10 @@
       <hr>
       <series-details :series='selectedSeries'></series-details>
       <hr>
+      <hr>
+      <all-seasons-list :allSeasons='allSeasons.seasons'></all-seasons-list>
+      <hr>
+      <season-details :season='selectedSeason'></season-details>
     </div>
   </main>
 </template>
@@ -38,6 +42,11 @@ export default {
   components: {
     "all-series-list": AllSeriesList,
     "series-details": SeriesDetails,
+
+    "all-seasons-list": AllSeasonsList,
+    "season-details": SeasonDetails,
+
+    "all-episodes-list": AllEpisodesList,
     "episode-details": EpisodeDetails
   },
   mounted() {
@@ -45,9 +54,9 @@ export default {
     .then(res => res.json())
     .then(all_series => this.allSeries = all_series)
 
-    // fetch("http://stapi.co/api/v1/rest/season/search")
-    // .then(res => res.json())
-    // .then(all_seasons => this.allSeasons = all_seasons)
+    fetch("http://stapi.co/api/v1/rest/season/search")
+    .then(res => res.json())
+    .then(all_seasons => this.allSeasons = all_seasons)
 
     // fetch("http://stapi.co/api/v1/rest/episode/search")
     // .then(res => res.json())
@@ -56,6 +65,10 @@ export default {
 
     eventBus.$on('series-selected', (series) => {
       this.selectedSeries = series;
+    })
+
+    eventBus.$on('season-selected', (season) => {
+      this.selectedSeason = season;
     })
   }
 }
