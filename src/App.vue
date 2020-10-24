@@ -6,13 +6,13 @@
       <all-series-list :allSeries='allSeries.series'></all-series-list>
       <br>
       <p class="testing">appmain seriesDetails</p>
-      <series-details :series='selectedSeries', :allSeasons='allSeasons.seasons'></series-details>
+      <series-details :series='selectedSeries' :allSeasons='allSeasons.seasons'></series-details>
       <hr>
       <p class="testing">appmain seasonsList</p>
       <all-seasons-list :allSeasons='allSeasons.seasons'></all-seasons-list>
       <br>
       <p class="testing">seasonDetails</p>
-      <season-details :season='selectedSeason', :allEpisodes='allEpisodes.episodes'></season-details>
+      <season-details :season='selectedSeason' :allEpisodes='allEpisodes.episodes'></season-details>
       <hr>
       <p class="testing">appmain allEpisodesList</p>
       <all-episodes-list :allEpisodes='allEpisodes.episodes'></all-episodes-list>
