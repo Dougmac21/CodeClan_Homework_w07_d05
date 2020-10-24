@@ -1,6 +1,6 @@
 <template lang="html">
     <div>
-        <h1>AllSeriesList</h1>
+        <h1>Select A Series:</h1>
         <ul>
             <all-series-list-item v-for="(series, index) in allSeries" :series="series" :key="index"></all-series-list-item>
         </ul>

@@ -1,5 +1,12 @@
 <template lang="html">
-  <h1>SeriesDetails</h1>
+  <div v-if='series'>
+    <h2>Series Details:</h2>
+    <h3>{{ series.title }}</h3>
+    <p> Ran for {{ series.seasonsCount }} seasons.</p>
+    <p> Over {{ series.episodesCount }} episodes.</p>
+
+  </div>
+
 </template>
 
 <script>

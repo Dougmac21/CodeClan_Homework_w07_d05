@@ -2,7 +2,7 @@
   <main>
     <h1>Star TrekkR</h1>
     <div class ="main-container">
-      <all-series-list :allSeries='allSeries'></all-series-list>
+      <all-series-list :allSeries='allSeries.series'></all-series-list>
       <hr>
       <series-details :series='selectedSeries'></series-details>
       <hr>
@@ -53,6 +53,10 @@ export default {
     // .then(res => res.json())
     // .then(all_episodes => this.allEpisodes = all_episodes)
 
+
+    eventBus.$on('series-selected', (series) => {
+      this.selectedSeries = series;
+    })
   }
 }
 </script>

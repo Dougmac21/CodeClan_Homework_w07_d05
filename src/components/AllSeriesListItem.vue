@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1>AllSeriesListItem</h1>
-
-    <li v-on:click='handleClick'> {{ series.name }}</li>
-
+      <ul>
+          <li v-on:click='handleClick'> {{ series.title }}</li>
+      </ul>
   </div>
 </template>
 
@@ -14,12 +13,16 @@ export default {
     name: 'all-series-list-item',
     props: ['series'],
     methods: {
-
+        handleClick() {
+            eventBus.$emit('series-selected', this.series)
+        }
     }
-
 }
 </script>
 
 <style lang="css" scoped>
-
+ul {
+    list-style: none;
+    cursor: pointer;
+}
 </style>
