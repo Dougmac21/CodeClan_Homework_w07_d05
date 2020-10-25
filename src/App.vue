@@ -1,8 +1,5 @@
 <template lang="html">
   <main>
-    <h1
-    v-on:click='handleTitleClick'
-    >Star TrekkR</h1>
     <article class ="main-container">
       <all-series-list :allSeries='allSeries'></all-series-list>
       <series-details :series='selectedSeries' :allSeasons='allSeasons'></series-details>
@@ -37,7 +34,7 @@ export default {
     }
   },
   methods: {
-    handleTitleClick() {
+    handleAlertClick() {
       alert("Don't click there...")
     },
 
@@ -152,6 +149,10 @@ export default {
 
     eventBus.$on('episode-selected', (episode) => {
       this.selectedEpisode = episode;
+    }),
+
+    eventBus.$on('alert-selected', () => {
+      this.handleAlertClick()
     })
   }
 }
