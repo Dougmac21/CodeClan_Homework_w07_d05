@@ -5,7 +5,7 @@
         <span>consisted of {{ season.numberOfEpisodes }} episodes:</span>
         <ul>
             <all-episodes-list-item
-            v-if="season.series.title === episode.series.title"
+            v-if="season.title === episode.season.title"
             v-for="(episode, index) in allEpisodes" :episode="episode" :key="index"
             >
             </all-episodes-list-item>
