@@ -2,13 +2,13 @@
   <main>
     <h1>Star TrekkR</h1>
     <div class ="main-container">
-      <all-series-list :allSeries='allSeries.series'></all-series-list>
+      <all-series-list :allSeries='allSeries'></all-series-list>
       <br>
-      <series-details :series='selectedSeries' :allSeasons='allSeasons.seasons'></series-details>
+      <series-details :series='selectedSeries' :allSeasons='allSeasons'></series-details>
       <hr>
       <!-- <all-seasons-list :allSeasons='allSeasons.seasons'></all-seasons-list> -->
       <br>
-      <season-details :season='selectedSeason' :allEpisodes='allEpisodes.episodes'></season-details>
+      <season-details :season='selectedSeason' :allEpisodes='allEpisodes'></season-details>
       <hr>
       <!-- <all-episodes-list :allEpisodes='allEpisodes.episodes'></all-episodes-list> -->
       <br>
