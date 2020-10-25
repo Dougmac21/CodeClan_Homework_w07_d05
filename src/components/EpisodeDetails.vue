@@ -1,10 +1,17 @@
 <template lang="html">
     <div v-if='episode'>
-        <h2>Episode {{ episode.episodeNumber }}</h2>
-        <span>Season {{ episode.seasonNumber }}- Episode {{ episode.episodeNumber }}: </span>
+        <h2>Episode Details:</h2>
         <span>{{ episode.title }}</span>
         <ul>
-            <span>This episode originally aired on: {{ episode.usAirDate }}, </span>
+            <li>Original US airdate:</li>
+            <li>- {{ episode.usAirDate }}</li>
+            <br>
+            <li>In-universe events:
+            <li>- Stardate {{ episode.stardateFrom }} to Stardate:{{ episode.stardateTo }}</li>
+            <br>
+            <li>Plot synopsis from [Memory Alpha]:</li>
+            <li>- not currently available</li>
+            <br>
         </ul>
 
 
@@ -33,5 +40,9 @@ components: {
 </script>
 
 <style lang="css" scoped>
+
+ul {
+    list-style: none;
+}
 
 </style>
