@@ -43,7 +43,7 @@ export default {
     getSeriesData: function() {
       fetch("http://stapi.co/api/v1/rest/series/search")
       .then(res => res.json())
-      .then(all_series => this.allSeries = all_series)
+      .then(all_series => this.allSeries = all_series.series)
       .then(() => this.sortSeries("productionStartYear"))
     },
 
@@ -56,7 +56,7 @@ export default {
     getSeasonData: function() {
       fetch("http://stapi.co/api/v1/rest/season/search")
       .then(res => res.json())
-      .then(all_seasons => this.allSeasons = all_seasons)
+      .then(all_seasons => this.allSeasons = all_seasons.seasons)
       .then(() => this.sortSeasons("seasonNumber"))
     },
 
@@ -69,11 +69,7 @@ export default {
     getEpisodeData: function() {
       fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=0&pageSize=100&numberOfElements=100")
       .then(res => res.json())
-      .then(all_episodes => this.allEpisodes = all_episodes)
-      .then(() => this.sortEpisodes("episodeNumber"))
-      fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=2&pageSize=100&numberOfElements=100")
-      .then(res => res.json())
-      .then(all_episodes => this.allEpisodes = all_episodes)
+      .then(all_episodes => this.allEpisodes = all_episodes.episodes)
       .then(() => this.sortEpisodes("episodeNumber"))
     },
 
@@ -82,6 +78,29 @@ export default {
         return episodeA[episodeProperty] < episodeB[episodeProperty] ? -1 : 1;
       });
     },
+
+    // getEveryEpisodeData: function() {
+    //   const promises = [1, 2, 3, 4, 5, 6, 7].map(pageNumber => {
+    //     return fetch(
+    //       `http://stapi.co/api/v1/rest/episode/search?pageNumber=${pageNumber}&pageSize=100&numberOfElements=100`
+    //       )
+    //       .then(res => res.json())
+    //       .then(all_episodes => this.allEpisodes = all_episodes)
+    //       // .then(() => this.sortEpisodes("episodeNumber"))
+          
+    //   });
+    // }
+
+    //   Promise.all(promises)
+    //     .then(data => {
+    //       const episodeData = data.reduce(
+    //         (flat, toFlatten) => flat.concat(toFlatten),
+    //         []
+    //       );
+    //       this.allEpisodes = episodeData;
+    //     })
+    //     .then(() => this.sortEpisodes("episodeNumber"));
+    // }
 
     // getCompleteEpisodeData: function() {
     //   fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=0&pageSize=100&numberOfElements=100")
