@@ -137,6 +137,7 @@ export default {
     this.getSeriesData();
     this.getSeasonData();
     this.getEpisodeData();
+    // this.getEveryEpisodeData();
 
     // eventBus.$on('series-selected', series => (this.selectedSeries = series));
 
