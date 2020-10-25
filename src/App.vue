@@ -162,9 +162,8 @@ export default {
 <style lang="css" scoped>
 h1 {
   color: wheat;
-  background-color: rgb(43, 43, 43);
+  background-color: rgb(0, 0, 0);
   width: 100vw;
-  height: 5vh;
   text-align: left;
   font-family: 'Times New Roman', Times, serif;
   text-decoration: underline;
@@ -172,7 +171,7 @@ h1 {
 
 .main-container {
   color: wheat;
-  background-color: rgb(43, 43, 43);
+  background-color: rgba(0, 0, 0, 0.664);
   width: 100vw;
   height: 90vh;
   margin: 0 auto;
