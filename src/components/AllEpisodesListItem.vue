@@ -1,13 +1,23 @@
 <template>
-  <div>
+    <div>
         <li
         
         v-on:click='handleEpisodeClick'
         >
         <span id="episode-number">{{ episode.episodeNumber }}</span>
+        </li>
+        <li
+
+
+        >
         <span id="episode-title">: {{ episode.title }}</span>
         </li>
-  </div>
+        <li
+
+        >
+        <br>
+        </li>
+    </div>
 </template>
 
 <script>

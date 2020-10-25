@@ -15,7 +15,7 @@
             <li
             v-if="series.productionStartYear !== null"
             >
-            <br></br>
+            <br>
             </li>
     </article>
 </template>
