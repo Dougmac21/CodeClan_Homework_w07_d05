@@ -48,7 +48,7 @@ export default {
     },
 
     sortSeries: function(seriesProperty) {
-      this.allSeries.series.sort((seriesA, seriesB) => {
+      this.allSeries.sort((seriesA, seriesB) => {
         return seriesA[seriesProperty] < seriesB[seriesProperty] ? -1 : 1;
       });
     },
@@ -60,9 +60,9 @@ export default {
       .then(() => this.sortSeasons("seasonNumber"))
     },
 
-    sortSeasons: function(seasonNumber) {
-      this.allSeasons.seasons.sort((seasonA, seasonB) => {
-        return seasonA[seasonNumber] < seasonB[seasonNumber] ? -1 : 1;
+    sortSeasons: function(seasonProperty) {
+      this.allSeasons.sort((seasonA, seasonB) => {
+        return seasonA[seasonProperty] < seasonB[seasonProperty] ? -1 : 1;
       });
     },
 
@@ -103,7 +103,7 @@ export default {
     },
 
     sortEpisodes: function(episodeProperty) {
-      this.allEpisodes.episodes.sort((episodeA, episodeB) => {
+      this.allEpisodes.sort((episodeA, episodeB) => {
         return episodeA[episodeProperty] < episodeB[episodeProperty] ? -1 : 1;
       });
     },
