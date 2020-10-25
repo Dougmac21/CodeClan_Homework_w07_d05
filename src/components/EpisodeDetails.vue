@@ -1,6 +1,6 @@
 <template lang="html">
     <div v-if='episode'>
-        <h2>{{ episode.series.title }}</h2>
+        <h2>Episode {{ episode.episodeNumber }}</h2>
         <span>Season {{ episode.seasonNumber }}- Episode {{ episode.episodeNumber }}: </span>
         <span>{{ episode.title }}</span>
         <ul>

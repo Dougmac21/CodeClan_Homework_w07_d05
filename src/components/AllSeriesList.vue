@@ -1,7 +1,7 @@
 <template lang="html">
     <div>
         <h2>Select A Series:</h2>
-        <span>Series currently in production are not included.</span>
+        <span id="reminder">(Series in production are not included)</span>
         <ul>
             <all-series-list-item
             v-for="(series, index) in allSeries" :series="series" :key="index">
@@ -25,5 +25,9 @@ export default {
 <style lang="css" scoped>
 
 
+
+.reminder {
+    font-style: italic;
+}
 
 </style>

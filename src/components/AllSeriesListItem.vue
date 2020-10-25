@@ -5,8 +5,17 @@
             v-on:click='handleSeriesClick'
             >
             <span id="series-title">    {{ series.title }}</span>
-            <hr>
+            </li>
+            <li
+            v-if="series.productionStartYear !== null"
+            v-on:click='handleSeriesClick'
+            >
             <span id="series-years">( {{ series.productionStartYear }} - {{ series.productionEndYear }} )</span>
+            </li>
+            <li
+            v-if="series.productionStartYear !== null"
+            >
+            <br></br>
             </li>
     </article>
 </template>
@@ -20,6 +29,8 @@ export default {
     methods: {
         handleSeriesClick() {
             eventBus.$emit('series-selected', this.series)
+            eventBus.$emit('season-selected', null)
+            eventBus.$emit('episode-selected', null)
         }
     }
 }
@@ -29,6 +40,7 @@ export default {
 
 .all-series-list-item {
     display: grid;
+    grid-template-rows: 25 25 25 25;
 }
 
 

@@ -33,8 +33,11 @@ components: {
 </script>
      
 <style lang="css" scoped>
-.testing {
-  color: red;
+
+ul {
+    list-style: none;
 }
+
+
 </style>
 

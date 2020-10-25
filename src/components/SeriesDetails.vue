@@ -34,7 +34,9 @@ components: {
 
 <style lang="css" scoped>
 
-
+ul {
+    list-style: none;
+}
 
 
 

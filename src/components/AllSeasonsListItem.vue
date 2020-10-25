@@ -18,6 +18,8 @@ export default {
     methods: {
         handleSeasonClick() {
             eventBus.$emit('season-selected', this.season)
+            eventBus.$emit('episode-selected', null)
+
         }
     }
 }

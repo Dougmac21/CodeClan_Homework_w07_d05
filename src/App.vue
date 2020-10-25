@@ -1,14 +1,16 @@
 <template lang="html">
   <main>
-    <h1>Star TrekkR</h1>
-    <div class ="main-container">
+    <h1
+    v-on:click='handleTitleClick'
+    >Star TrekkR</h1>
+    <article class ="main-container">
       <all-series-list :allSeries='allSeries'></all-series-list>
       <series-details :series='selectedSeries' :allSeasons='allSeasons'></series-details>
       <!-- <all-seasons-list :allSeasons='allSeasons.seasons'></all-seasons-list> -->
       <season-details :season='selectedSeason' :allEpisodes='allEpisodes'></season-details>
       <!-- <all-episodes-list :allEpisodes='allEpisodes.episodes'></all-episodes-list> -->
       <episode-details :episode='selectedEpisode'></episode-details>
-    </div>
+    </article>
   </main>
 </template>
 
@@ -35,6 +37,10 @@ export default {
     }
   },
   methods: {
+    handleTitleClick() {
+      alert("Don't click there...")
+    },
+
     getSeriesData: function() {
       fetch("http://stapi.co/api/v1/rest/series/search")
       .then(res => res.json())
@@ -157,6 +163,8 @@ export default {
 h1 {
   color: wheat;
   background-color: rgb(43, 43, 43);
+  width: 100vw;
+  height: 5vh;
   text-align: left;
   font-family: 'Times New Roman', Times, serif;
   text-decoration: underline;
@@ -186,37 +194,5 @@ li {
   justify-content: space-between;
 }
 
-
-li.high {
-  border: 2px solid #f2360c;
-  color: #f2360c;
-}
-
-li.low {
-  border: 2px solid #1a681e;
-}
-
-input[type="text"] {
-  padding: 10px;
-  width: 50%;
-  margin: 10px;
-}
-
-button{
-  padding: 10px;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  border: 1px solid #000;
-}
-
-
-
-
-
-
-.testing {
-  color: red;
-}
 
 </style>
