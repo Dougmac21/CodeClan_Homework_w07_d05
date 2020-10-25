@@ -36,6 +36,9 @@ components: {
 
 ul {
     list-style: none;
+    padding-left: 0;
+    height: 90vh;
+    overflow-y: auto;
 }
 
 

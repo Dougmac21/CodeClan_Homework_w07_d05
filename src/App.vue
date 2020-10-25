@@ -172,13 +172,15 @@ h1 {
 
 .main-container {
   color: wheat;
-  background-color: rgba(0, 0, 0, 0.664);
+  background-color: rgba(0, 0, 0, 0.667);
   width: 100vw;
   height: 90vh;
   margin: 0 auto;
   font-family: 'Times New Roman', Times, serif;
   display: grid;
   grid-template-columns: 25vw 25vw 25vw 25vw;
+  position: fixed; 
+  top: 60px; right: 0; bottom: 60px; left: 0;
 }
 
 ul {

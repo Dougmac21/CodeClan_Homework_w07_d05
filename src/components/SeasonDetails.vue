@@ -34,10 +34,16 @@ components: {
      
 <style lang="css" scoped>
 
-ul {
-    list-style: none;
-}
 
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    height: 66vh;
+    padding-bottom: 60px;
+    overflow-y: scroll;
+    scrollbar-color: white red;
+
+}
 
 </style>
 

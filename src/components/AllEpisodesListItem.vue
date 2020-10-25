@@ -4,13 +4,13 @@
         
         v-on:click='handleEpisodeClick'
         >
-        <span id="episode-number">{{ episode.episodeNumber }}</span>
+        <span id="episode-number">Episode {{ episode.episodeNumber }}</span>
         </li>
         <li
 
-
+        v-on:click='handleEpisodeClick'
         >
-        <span id="episode-title">: {{ episode.title }}</span>
+        <span id="episode-title"> - {{ episode.title }}</span>
         </li>
         <li
 
@@ -35,8 +35,11 @@ export default {
 </script>
 
 <style land="css" scoped>
-ul {
-    list-style: none;
+
+
+
+li {
+
     cursor: pointer;
 }
 .testing {

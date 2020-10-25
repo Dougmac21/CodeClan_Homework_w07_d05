@@ -1,12 +1,9 @@
 <template lang="html">
-    <div>
         <ul>
             <all-episodes-list-item
             v-for="(episode, index) in allEpisodes" :episode="episode" :key="index">
             </all-episodes-list-item>
         </ul>
-        <hr>
-    </div>
 </template>
 
 <script>
@@ -21,8 +18,8 @@ export default {
 }
 </script>
 
+
+
 <style lang="css" scoped>
-.testing {
-  color: red;
-}
+
 </style>

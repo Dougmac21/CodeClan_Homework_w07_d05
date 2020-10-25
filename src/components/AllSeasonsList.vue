@@ -22,6 +22,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
+ul {
+    list-style: none;
+    padding-left: 0;
+    height: 90vh;
+    overflow-y: auto;
+}
+
 
 .testing {
   color: red;

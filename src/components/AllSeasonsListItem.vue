@@ -8,7 +8,7 @@
         </li>
         <li
         
-        
+        v-on:click='handleSeasonClick'
         >
         <span id="season-num-eps">{{ season.numberOfEpisodes }} episodes</span>
         </li>
@@ -38,6 +38,13 @@ export default {
 <style lang="css" scoped>
 ul {
     list-style: none;
+    padding-left: 0;
+    height: 90vh;
+    overflow-y: auto;
+}
+
+li {
+    display: flex;
     cursor: pointer;
 }
 
