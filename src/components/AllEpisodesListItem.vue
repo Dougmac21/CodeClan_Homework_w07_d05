@@ -5,7 +5,7 @@
             
             v-on:click='handleEpisodeClick'
             >
-            <span id="episode-number">AllEpisodesListItem.vue - {{ episode.episodeNumber }}</span>
+            <span id="episode-number">{{ episode.episodeNumber }}</span>
             <span id="episode-title">: {{ episode.title }}</span>
             </li>
         </ul>

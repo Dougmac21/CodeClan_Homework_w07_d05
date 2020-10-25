@@ -1,7 +1,11 @@
 <template lang="html">
     <div v-if='episode'>
-        <h2>{{ episode.title }}</h2>
-
+        <h2>{{ episode.series.title }}</h2>
+            <ul>
+            <span>Season {{ episode.seasonNumber }}- Episode {{ episode.episodeNumber }}: </span>
+            <span>{{ episode.title }}</span>
+            <p>Original Airdate: {{ episode.usAirDate }}</p>
+            </ul>
 
 
 
