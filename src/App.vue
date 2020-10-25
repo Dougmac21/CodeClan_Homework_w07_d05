@@ -69,7 +69,36 @@ export default {
     getEpisodeData: function() {
       fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=0&pageSize=100&numberOfElements=100")
       .then(res => res.json())
-      .then(all_episodes => this.allEpisodes = all_episodes.episodes)
+      .then(all_episodes_0 => this.allEpisodes.push.apply(this.allEpisodes, all_episodes_0.episodes))
+      
+      fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=1&pageSize=100&numberOfElements=100")
+      .then(res => res.json())
+      .then(all_episodes_1 => this.allEpisodes.push.apply(this.allEpisodes, all_episodes_1.episodes))
+      
+      fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=2&pageSize=100&numberOfElements=100")
+      .then(res => res.json())
+      .then(all_episodes_2 => this.allEpisodes.push.apply(this.allEpisodes, all_episodes_2.episodes))
+      
+      fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=3&pageSize=100&numberOfElements=100")
+      .then(res => res.json())
+      .then(all_episodes_3 => this.allEpisodes.push.apply(this.allEpisodes, all_episodes_3.episodes))
+      
+      fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=4&pageSize=100&numberOfElements=100")
+      .then(res => res.json())
+      .then(all_episodes_4 => this.allEpisodes.push.apply(this.allEpisodes, all_episodes_4.episodes))
+      
+      fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=5&pageSize=100&numberOfElements=100")
+      .then(res => res.json())
+      .then(all_episodes_5 => this.allEpisodes.push.apply(this.allEpisodes, all_episodes_5.episodes))
+      
+      fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=6&pageSize=100&numberOfElements=100")
+      .then(res => res.json())
+      .then(all_episodes_6 => this.allEpisodes.push.apply(this.allEpisodes, all_episodes_6.episodes))
+      
+      fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=7&pageSize=100&numberOfElements=100")
+      .then(res => res.json())
+      .then(all_episodes_7 => this.allEpisodes.push.apply(this.allEpisodes, all_episodes_7.episodes))
+
       .then(() => this.sortEpisodes("episodeNumber"))
     },
 
@@ -85,78 +114,13 @@ export default {
     //       `http://stapi.co/api/v1/rest/episode/search?pageNumber=${pageNumber}&pageSize=100&numberOfElements=100`
     //       )
     //       .then(res => res.json())
-    //       .then(all_episodes => this.allEpisodes = all_episodes)
-    //       // .then(() => this.sortEpisodes("episodeNumber"))
-          
     //   });
-    // }
-
+    
     //   Promise.all(promises)
-    //     .then(data => {
-    //       const episodeData = data.reduce(
-    //         (flat, toFlatten) => flat.concat(toFlatten),
-    //         []
-    //       );
-    //       this.allEpisodes = episodeData;
-    //     })
-    //     .then(() => this.sortEpisodes("episodeNumber"));
-    // }
-
-    // getCompleteEpisodeData: function() {
-    //   fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=0&pageSize=100&numberOfElements=100")
-    //   .then(res => res.json())
-    //   .then(episodes_0 => this.allEpisodes.push(this.allEpisodes, episode_0))
-    //   .then(() => this.sortCompleteEpisodes("episodeNumber"));
-
-      
-      // fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=1&pageSize=100&numberOfElements=100")
-      // .then(res => res.json())
-      // .then(episodes_1 => this.allEpisodes.push(this.allEpisodes, episode_1))
-      // .then(() => this.sortCompleteEpisodes("episodeNumber"));
-
-      
-      // fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=2&pageSize=100&numberOfElements=100")
-      // .then(res => res.json())
-      // .then(episodes_2 => this.allEpisodes.push(this.allEpisodes, episode_2))
-      // .then(() => this.sortCompleteEpisodes("episodeNumber"));
-
-      
-      // fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=3&pageSize=100&numberOfElements=100")
-      // .then(res => res.json())
-      // .then(episodes_3 => this.allEpisodes.push(this.allEpisodes, episode_3))
-      // .then(() => this.sortCompleteEpisodes("episodeNumber"));
-
-      
-      // fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=4&pageSize=100&numberOfElements=100")
-      // .then(res => res.json())
-      // .then(episodes_4 => this.allEpisodes.push(this.allEpisodes, episode_4))
-      // .then(() => this.sortCompleteEpisodes("episodeNumber"));
-
-      
-      // fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=5&pageSize=100&numberOfElements=100")
-      // .then(res => res.json())
-      // .then(episodes_5 => this.allEpisodes.push(this.allEpisodes, episode_5))
-      // .then(() => this.sortCompleteEpisodes("episodeNumber"));
-
-      
-      // fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=6&pageSize=100&numberOfElements=100")
-      // .then(res => res.json())
-      // .then(episodes_6 => this.allEpisodes.push(this.allEpisodes, episode_6))
-      // .then(() => this.sortCompleteEpisodes("episodeNumber"));
-
-      
-      // fetch("http://stapi.co/api/v1/rest/episode/search?pageNumber=7&pageSize=100&numberOfElements=100")
-      // .then(res => res.json())
-      // .then(episodes_7 => this.allEpisodes.push(this.allEpisodes, episode_7))
-      // .then(() => this.sortCompleteEpisodes("episodeNumber"));
-    },
-
-    // sortCompleteEpisodes: function(episodeProperty) {
-    //   this.allEpisodes.episodes.sort((episodeA, episodeB) => {
-    //     return episodeA[episodeProperty] < episodeB[episodeProperty] ? -1 : 1;
-    //   });
-  //   }
-  // },
+    //     .then(everyEpisodeData => this.allEpisodes = everyEpisodeData.episodes)
+    //       .then(() => this.sortEpisodes("episodeNumber"))
+    // },
+  },
 
   components: {
     "all-series-list": AllSeriesList,
@@ -173,7 +137,6 @@ export default {
     this.getSeriesData();
     this.getSeasonData();
     this.getEpisodeData();
-    // this.getCompleteEpisodeData();
 
     // eventBus.$on('series-selected', series => (this.selectedSeries = series));
 
@@ -190,6 +153,8 @@ export default {
     })
   }
 }
+
+
 </script>
 
 <style lang="css" scoped>
