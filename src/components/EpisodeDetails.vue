@@ -7,7 +7,9 @@
             <li>- {{ episode.usAirDate }}</li>
             <br>
             <li>In-universe events:
-            <li>- Stardate {{ episode.stardateFrom }} to Stardate:{{ episode.stardateTo }}</li>
+            <li v-if="episode.stardateFrom !== null"
+            >
+            - Stardate {{ episode.stardateFrom }} to Stardate:{{ episode.stardateTo }}</li>
             <br>
             <li>Plot synopsis from [Memory Alpha]:</li>
             <li>- not currently available</li>
