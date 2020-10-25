@@ -1,15 +1,14 @@
 <template>
-    <div>
-        <ul>
+    <article class="all-series-list-item">
             <li
             v-if="series.productionStartYear !== null"
             v-on:click='handleSeriesClick'
             >
-            <span id="series-title">    {{ series.title }}: </span>
+            <span id="series-title">    {{ series.title }}</span>
+            <hr>
             <span id="series-years">( {{ series.productionStartYear }} - {{ series.productionEndYear }} )</span>
             </li>
-        </ul>
-    </div>
+    </article>
 </template>
 
 <script>
@@ -27,13 +26,19 @@ export default {
 </script>
 
 <style lang="css" scoped>
-ul {
-    list-style: none;
+
+.all-series-list-item {
+    display: grid;
+}
+
+
+
+
+li {
+    display: flex;
     cursor: pointer;
 }
 
-.testing {
-  color: red;
-}
+
 
 </style>

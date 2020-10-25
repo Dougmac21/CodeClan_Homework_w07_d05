@@ -3,15 +3,10 @@
     <h1>Star TrekkR</h1>
     <div class ="main-container">
       <all-series-list :allSeries='allSeries'></all-series-list>
-      <br>
       <series-details :series='selectedSeries' :allSeasons='allSeasons'></series-details>
-      <hr>
       <!-- <all-seasons-list :allSeasons='allSeasons.seasons'></all-seasons-list> -->
-      <br>
       <season-details :season='selectedSeason' :allEpisodes='allEpisodes'></season-details>
-      <hr>
       <!-- <all-episodes-list :allEpisodes='allEpisodes.episodes'></all-episodes-list> -->
-      <br>
       <episode-details :episode='selectedEpisode'></episode-details>
     </div>
   </main>
@@ -160,8 +155,66 @@ export default {
 
 <style lang="css" scoped>
 h1 {
+  color: wheat;
+  background-color: rgb(43, 43, 43);
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
   text-decoration: underline;
 }
+
+.main-container {
+  color: wheat;
+  background-color: rgb(43, 43, 43);
+  width: 100vw;
+  height: 90vh;
+  margin: 0 auto;
+  font-family: 'Times New Roman', Times, serif;
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+li.high {
+  border: 2px solid #f2360c;
+  color: #f2360c;
+}
+
+li.low {
+  border: 2px solid #1a681e;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 50%;
+  margin: 10px;
+}
+
+button{
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+
+
+
+
+
 .testing {
   color: red;
 }

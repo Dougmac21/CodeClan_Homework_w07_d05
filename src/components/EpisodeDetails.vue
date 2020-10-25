@@ -4,8 +4,7 @@
         <span>Season {{ episode.seasonNumber }}- Episode {{ episode.episodeNumber }}: </span>
         <span>{{ episode.title }}</span>
         <ul>
-            <span>Originally airing on: {{ episode.usAirDate }}, </span>
-            <span>this episodes events took place between Stardate {{ episode.stardateFrom }} and Stardate {{ episode.stardateTo }}</span>
+            <span>This episode originally aired on: {{ episode.usAirDate }}, </span>
         </ul>
 
 
@@ -34,7 +33,5 @@ components: {
 </script>
 
 <style lang="css" scoped>
-.testing {
-  color: red;
-}
+
 </style>

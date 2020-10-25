@@ -1,11 +1,12 @@
 <template lang="html">
     <div>
+        <h2>Select A Series:</h2>
+        <span>Series currently in production are not included.</span>
         <ul>
             <all-series-list-item
             v-for="(series, index) in allSeries" :series="series" :key="index">
             </all-series-list-item>
         </ul>
-        <hr>
     </div>
 </template>
 
@@ -23,8 +24,6 @@ export default {
 
 <style lang="css" scoped>
 
-.testing {
-  color: red;
-}
+
 
 </style>

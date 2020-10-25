@@ -1,5 +1,5 @@
 <template lang="html">
-    <div v-if='series'>
+    <article v-if='series'>
         <h2>{{ series.title }}</h2>
         <span> Ran for a total of {{ series.episodesCount }} episodes</span>
         <span> over {{ series.seasonsCount }} seasons.</span>
@@ -10,7 +10,7 @@
             >
             </all-seasons-list-item>
         </ul>
-    </div>
+    </article>
 </template>
 
 <script>
@@ -33,6 +33,11 @@ components: {
 </script>
 
 <style lang="css" scoped>
+
+
+
+
+
 .testing {
   color: red;
 }
