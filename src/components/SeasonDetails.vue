@@ -1,6 +1,6 @@
 <template lang="html">
     <article v-if='season'>
-        <h2>Season {{ season.seasonNumber }}</h2>
+        <h2>Season {{ season.seasonNumber }}:</h2>
         <span>Season {{ season.seasonNumber }} </span>
         <span>consisted of {{ season.numberOfEpisodes }} episodes:</span>
         <ul>
