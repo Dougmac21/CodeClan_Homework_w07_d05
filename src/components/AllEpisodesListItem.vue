@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style land="css" scoped>
+<style lang="css" scoped>
 
 
 
