@@ -1,4 +1,4 @@
-# star_trekkr
+# star_trekkr - vue
 
 ## Project setup
 ```
