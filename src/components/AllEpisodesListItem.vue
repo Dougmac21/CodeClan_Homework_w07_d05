@@ -12,9 +12,7 @@
         >
         <span id="episode-title"> - {{ episode.title }}</span>
         </li>
-        <li
-
-        >
+        <li>
         <br>
         </li>
     </div>

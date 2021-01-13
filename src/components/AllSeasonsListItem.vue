@@ -1,5 +1,5 @@
 <template>
-    <article>
+    <div>
         <li
         
         v-on:click='handleSeasonClick'
@@ -12,12 +12,10 @@
         >
         <span id="season-num-eps">{{ season.numberOfEpisodes }} episodes</span>
         </li>
-        <li
-        
-        >
+        <li>
         <br>
         </li>
-    </article>
+    </div>
 </template>
 
 <script>

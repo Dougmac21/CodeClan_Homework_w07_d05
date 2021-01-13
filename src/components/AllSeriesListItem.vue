@@ -1,5 +1,5 @@
 <template>
-    <article class="all-series-list-item">
+    <div class="all-series-list-item">
             <li
             v-if="series.productionStartYear !== null"
             v-on:click='handleSeriesClick'
@@ -12,12 +12,7 @@
             >
             <span id="series-years">( {{ series.productionStartYear }} - {{ series.productionEndYear }} )</span>
             </li>
-            <li
-            v-if="series.productionStartYear !== null"
-            >
-            <br>
-            </li>
-    </article>
+    </div>
 </template>
 
 <script>

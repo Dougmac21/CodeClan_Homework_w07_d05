@@ -7,18 +7,20 @@
             <li>- {{ episode.usAirDate }}</li>
             <br>
             <li>In-universe events:
-            <li v-if="episode.stardateFrom !== null"
-            >
-            - Stardate {{ episode.stardateFrom }} to Stardate:{{ episode.stardateTo }}</li>
+            <li v-if="episode.stardateFrom !== null">
+                - Stardate {{ episode.stardateFrom }} to Stardate:{{ episode.stardateTo }}
+            </li>
+            <p></p>
             <br>
-            <li>Plot synopsis from [Memory Alpha]:</li>
-            <li>- not currently available</li>
+            <li>
+                <a href="https://memory-alpha.fandom.com/wiki/Portal:Main">Read more at Memory Alpha</a>
+            </li>
+            <br>
+            <li>
+                <a href="https://memory-beta.fandom.com/wiki/Main_Page">Read even more at Memory Beta</a>
+            </li>
             <br>
         </ul>
-
-
-
-
     </div>
 </template>
 
