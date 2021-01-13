@@ -1,13 +1,11 @@
 {
-  "name": "trekkr",
+  "name": "star_trekkr",
   "version": "0.1.0",
-  "description": "a Vue.js project",
-  "author": "dougmac21",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
     "start": "node server.js",
-    "build": "node build/build.js",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
     "serve": "vue-cli-service serve",
     "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi ",
     "test:unit": "vue-cli-service test:unit",
